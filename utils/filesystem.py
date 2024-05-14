@@ -153,3 +153,28 @@ def save_dict_to_csv(xl_dict, output_folder):
             file.write(filedata)
 
         print(f"Saved {key}.csv")
+
+#
+# Load an Excel file and convert a specific sheet into a DataFrame.
+#
+def load_excel_sheet_to_dataframe(folder, file, sheet_name, rows_to_skip) -> pd.DataFrame:
+    # Get full path to file
+    file_path = os.path.join(folder, file)
+
+    # Check if the input file exists
+    if not os.path.exists(file_path):
+        print(f"File not found: {file_path}")
+        return None
+
+    # Load spreadsheet
+    xl = pd.ExcelFile(file_path)
+
+    # Check if the sheet exists in the Excel file
+    if sheet_name not in xl.sheet_names:
+        print(f"Sheet '{sheet_name}' not found in '{file}'. Available sheets: {xl.sheet_names}")
+        return None
+
+    # Load the specified sheet into a DataFrame
+    df = pd.read_excel(xl, sheet_name=sheet_name, skiprows=rows_to_skip)
+
+    return df

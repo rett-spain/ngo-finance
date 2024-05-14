@@ -160,5 +160,4 @@ cython_debug/
 #.idea/
 
 # Ignore my local config
-config.yaml
-
+config.json
