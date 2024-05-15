@@ -109,7 +109,7 @@ def save_df_to_parquet(df, output_folder, filename):
 #
 def find_latest_folder(base_folder) -> str:
     # Get list of all folders in the base_folder
-    folders = glob.glob(os.path.join(base_folder, '*/*/*/*/*/*'))
+    folders = glob.glob(os.path.join(base_folder, '*/*/*/*/*/*/*'))
 
     # Throw an error if the directory is empty
     if len(folders) == 0:
@@ -173,6 +173,30 @@ def save_dict_to_csv(xl_dict, output_folder):
             file.write(filedata)
 
         print(f"Saved {key}.csv")
+
+#
+# Save a DataFrame into a CSV file in a specified output folder.
+#
+def save_df_to_csv(df: pd.DataFrame, output_folder: str, filename: str):
+    # Create folder for output (if it doesn't exist yet)
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
+
+    # Save DataFrame to a CSV file with ',' as decimal separator
+    df.to_csv(f"{output_folder}/{filename}.csv", index=False, sep=';', decimal=',')
+
+    # Open the CSV file and replace 'nan' and 'NaT' with ''
+    with open(f"{output_folder}/{filename}.csv", 'r') as file:
+        filedata = file.read()
+
+    # Replace the target string
+    filedata = filedata.replace('nan', '').replace('NaT', '')
+
+    # Write the file out again
+    with open(f"{output_folder}/{filename}.csv", 'w') as file:
+        file.write(filedata)
+
+    print(f"Saved {filename}.csv")
 
 #
 # Load an Excel file and convert a specific sheet into a DataFrame.

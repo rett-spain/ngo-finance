@@ -164,3 +164,6 @@ config.json
 
 # Ignore data files
 data/
+
+# Ignore PBIX files
+*.pbix
