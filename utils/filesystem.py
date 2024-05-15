@@ -82,6 +82,26 @@ def save_dict_to_parquet(xl_dict, output_folder):
         # Save each DataFrame to a parquet file in the output folder
         xl_dict[key].to_parquet(f"{output_folder}/{key}.parquet", index=False)
 
+#
+# Save a DataFrame into a Parquet file in a specified output folder.
+#
+def save_df_to_parquet(df, output_folder, filename):
+    # Create folder for output (if it doesn't exist yet)
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
+
+    # Convert all non-numeric columns to string
+    for col in df.select_dtypes(exclude=['int64', 'float64']).columns:
+        df[col] = df[col].astype(str)
+
+    # Convert all UUID columns to string
+    for column in df.columns:
+        if df[column].apply(lambda x: isinstance(x, uuid.UUID)).any():
+            df[column] = df[column].astype(str)
+
+    # Save DataFrame to a parquet file in the output folder
+    df.to_parquet(f"{output_folder}/{filename}.parquet", index=False)
+
 
 #
 # Folders have the following structure:

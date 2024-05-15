@@ -161,3 +161,6 @@ cython_debug/
 
 # Ignore my local config
 config.json
+
+# Ignore data files
+data/
