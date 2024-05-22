@@ -167,3 +167,6 @@ data/
 
 # Ignore PBIX files
 *.pbix
+
+# Ignore VS Code settings
+.vscode/
