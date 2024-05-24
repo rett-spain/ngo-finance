@@ -170,3 +170,6 @@ data/
 
 # Ignore VS Code settings
 .vscode/
+
+# Ignore xml files
+*.xml
