@@ -222,3 +222,20 @@ def load_excel_sheet_to_dataframe(folder, file, sheet_name, rows_to_skip) -> pd.
     df = pd.read_excel(xl, sheet_name=sheet_name, skiprows=rows_to_skip)
 
     return df
+
+#
+# Load a CSV file into a DataFrame.
+#
+def load_csv_to_dataframe(folder, file, rows_to_skip) -> pd.DataFrame:
+    # Get full path to file
+    file_path = os.path.join(folder, file)
+
+    # Check if the input file exists
+    if not os.path.exists(file_path):
+        print(f"File not found: {file_path}")
+        return None
+
+    # Load CSV file into a DataFrame
+    df = pd.read_csv(file_path, skiprows=rows_to_skip)
+
+    return df
