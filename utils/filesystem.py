@@ -4,7 +4,7 @@ import pandas as pd
 import glob
 import numpy as np
 import datetime
-
+from pandas import json_normalize
 
 #
 # List all files in a directory and throw an error if the directory is empty.
@@ -239,3 +239,14 @@ def load_csv_to_dataframe(folder, file, rows_to_skip) -> pd.DataFrame:
     df = pd.read_csv(file_path, skiprows=rows_to_skip)
 
     return df
+
+#
+# Save json to csv format
+#
+def save_json_to_csv(json_obj, csv_file_path):
+    # Flatten the JSON object
+    flat_json = json_normalize(json_obj, sep='_')
+
+    # Convert to a DataFrame and save as a CSV file
+    df = pd.DataFrame(flat_json)
+    df.to_csv(csv_file_path, index=False)
