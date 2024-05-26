@@ -185,3 +185,8 @@ class SalesForceAPI:
                 writer.writerow(contact)
                 
         print(f"Exported {len(contacts)} contacts to {file_path}")
+
+    # Execute a SOQL query
+    def execute_soql_query(self, query):
+        result = self.sf.query_all(query)
+        return result
