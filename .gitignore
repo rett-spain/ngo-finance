@@ -162,6 +162,7 @@ cython_debug/
 # Ignore my local config
 config.json
 config-paypal.json
+config-salesforce.json
 
 # Ignore data files
 data/
