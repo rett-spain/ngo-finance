@@ -190,8 +190,8 @@
     },
     {
       "type": "image",
-      "version": 279,
-      "versionNonce": 77720676,
+      "version": 280,
+      "versionNonce": 332806323,
       "isDeleted": false,
       "id": "TjQKKb6r1e1OCsCqhcsDl",
       "fillStyle": "solid",
@@ -211,9 +211,9 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1716752701987,
+      "updated": 1716809306873,
       "link": null,
-      "locked": true,
+      "locked": false,
       "status": "pending",
       "fileId": "d223b8cb53f306051e66e9f2422e31d9f090f5cf",
       "scale": [
