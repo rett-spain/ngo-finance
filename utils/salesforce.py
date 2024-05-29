@@ -186,7 +186,33 @@ class SalesForceAPI:
                 
         print(f"Exported {len(contacts)} contacts to {file_path}")
 
+    # Generic bulk export to a CSV file
+    def export_to_csv(self, file_path, soql_query):
+        result = self.sf.query_all(soql_query)
+
+        contacts = result['records']
+        fieldnames = contacts[0].keys()
+
+        with open(file_path, mode='w', newline='') as file:
+            writer = csv.DictWriter(file, fieldnames=fieldnames)
+            writer.writeheader()
+            for contact in contacts:
+                writer.writerow(contact)
+                
+        print(f"Exported {len(contacts)} contacts to {file_path}")
+
     # Execute a SOQL query
     def execute_soql_query(self, query):
         result = self.sf.query_all(query)
         return result
+
+    # Bulk import transactions to Salesforce (Transaction__c object)
+    def bulk_import_transactions(self, records):
+        try:
+            self.sf.bulk.Transaction__c.insert(records)
+            print(f'Uploaded {len(records)} transactions')
+        except SalesforceMalformedRequest as e:
+            print(e)
+            return False
+
+        return True
