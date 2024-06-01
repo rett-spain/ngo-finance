@@ -59,4 +59,4 @@ Feature: Gestión de Contactos
   Escenario: Dar de baja un contacto
     Dado que el usuario está en la sección de contactos
     Cuando el usuario selecciona un contacto
-    Entonces el usuario puede dar de baja el contacto, cambiando el tipo de contacto a "Baja" y añadir una fecha de baja
+    Entonces el usuario puede dar de baja el contacto, cambiando el tipo de contacto a "Baja" y obligando a introducir una fecha de baja

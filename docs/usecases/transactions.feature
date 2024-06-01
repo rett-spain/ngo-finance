@@ -36,6 +36,20 @@ Feature: Gestión de Transacciones
     Y el usuario guarda la asociación
     Entonces la transacción es asociada con el contacto seleccionado
     # El contacto seleccionado puede ser cualquier contacto independientemente del tipo de contacto
+    # Por ejemplo, una donación puede ser asociada con un contacto de tipo socio, donante particular, empresa, etc.
+
+  Escenario: Editar una transacción
+    Dado que el usuario está en la sección de transacciones
+    Cuando el usuario selecciona una transacción de la lista y selecciona la opción para editar
+    Y el usuario modifica los detalles de la transacción (fecha, monto, descripción y categoría)
+    Y el usuario guarda los cambios
+    Entonces la transacción es actualizada en el sistema
+
+  Escenario: Eliminar una transacción
+    Dado que el usuario está en la sección de transacciones
+    Cuando el usuario selecciona una transacción de la lista y selecciona la opción para eliminar
+    Y el usuario confirma la eliminación
+    Entonces la transacción es eliminada del sistema
 
   Escenario: Filtrar transacciones por categoría
     Dado que el usuario está en la sección de transacciones
@@ -53,3 +67,18 @@ Feature: Gestión de Transacciones
     Y el usuario elige un contacto de la lista de contactos
     Y el usuario guarda la asociación
     Entonces las transacciones seleccionadas son asociadas con el contacto seleccionado
+
+  Escenario: Importar remesa bancaria a partir de un archivo con formato específico para pagos de cuotas de socios
+    Dado que el usuario está en la sección de transacciones
+    Cuando el usuario selecciona la opción para importar una remesa bancaria
+    Y el usuario carga el archivo con la remesa bancaria
+    Y el sistema procesa el archivo y muestra un resumen de las transacciones importadas
+    Y el usuario confirma y guarda las transacciones
+    Entonces las transacciones son guardadas en el sistema como pago de cuotas de socios
+
+    Ejemplos:
+    # Formato de archivo de remesa bancaria
+    | DNI socio | Nombre socio | Fecha de pago |
+    | XXXXXXXXX | Juan Pérez   | 2021-01-15   |
+    | XXXXXXXXX | María López  | 2021-01-15   |
+    | XXXXXXXXX | Pedro Gómez  | 2021-01-15   |

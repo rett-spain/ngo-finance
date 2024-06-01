@@ -19,5 +19,3 @@ Feature: Gestión de Rett Persona
     Cuando el usuario busca una Rett Persona
     Entonces el usuario ve una lista de contactos que coinciden con la búsqueda
     # Buscar por Nombre y Apellidos, Fecha de Nacimiento y Provincia
-
-  Escenario: 
