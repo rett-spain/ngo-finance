@@ -24,3 +24,23 @@ Feature: Gestión de Contactos
     Dado que el usuario está autenticado y en la sección de contactos
     Cuando el usuario selecciona un contacto
     Entonces el usuario ve una lista de transacciones asociadas al contacto
+
+  Escenario: Editar el tipo de contacto
+    Dado que el usuario está autenticado y en la sección de contactos
+    Cuando el usuario selecciona un contacto
+    Entonces el usuario puede editar el tipo de contacto
+
+    Ejemplos: 
+      | tipo de contacto |
+      | Socio ordinario |
+      | Socio colaborador |
+      | Donante particular |
+      | Donante empresa |
+      | No socio |
+      | Baja |
+
+  Escenario: Dar de baja un contacto
+    Dado que el usuario está autenticado y en la sección de contactos
+    Cuando el usuario selecciona un contacto
+    Entonces el usuario puede dar de baja el contacto, cambiando el tipo de contacto a "Baja" y añadir una fecha de baja
+

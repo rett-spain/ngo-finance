@@ -30,3 +30,4 @@ Feature: Gestión de Transacciones
     Y el usuario busca y selecciona el proveedor correspondiente
     Y el usuario guarda la asociación
     Entonces la transacción es asociada con el proveedor seleccionado
+
