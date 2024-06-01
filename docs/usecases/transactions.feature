@@ -7,6 +7,17 @@ Feature: Gestión de Transacciones
     Y el usuario guarda la transacción
     Entonces la nueva transacción es guardada en el sistema
     Y la transacción es visible en la lista de transacciones
+    
+    Ejemplos:
+    # Categorías disponibles
+    | Categoría |
+    | Donaciones |
+    | Cuotas |
+    | Subvenciones |
+    | Gastos |
+    | Eventos |
+    | Administrativo |
+    | Actividades |
 
   Escenario: Añadir una lista de transacciones bancarias
     Dado que el usuario está en la sección de transacciones
@@ -16,19 +27,29 @@ Feature: Gestión de Transacciones
     Y el usuario confirma y guarda las transacciones
     Entonces las transacciones son guardadas en el sistema
     Y las transacciones son visibles en la lista de transacciones
-    # En este caso, quedaría pendiente la validación de los datos importados y categorización de las transacciones
+    # En este caso, quedaría pendiente la validación de los datos importados y la categorización de las transacciones
 
-  Escenario: Asociar una transacción con una cuenta de pago
+  Escenario: Asociar una transacción con un contacto
     Dado que el usuario está en la sección de transacciones
-    Cuando el usuario selecciona una transacción de la lista
-    Y el usuario elige la cuenta de pago correspondiente
+    Cuando el usuario selecciona una transacción de la lista y selecciona la opción para asociar un contacto
+    Y el usuario elige un contacto de la lista de contactos
     Y el usuario guarda la asociación
-    Entonces la transacción es asociada con la cuenta de pago seleccionada
+    Entonces la transacción es asociada con el contacto seleccionado
+    # El contacto seleccionado puede ser cualquier contacto independientemente del tipo de contacto
 
-  Escenario: Asociar una transacción con un proveedor
+  Escenario: Filtrar transacciones por categoría
     Dado que el usuario está en la sección de transacciones
-    Cuando el usuario selecciona una transacción de la lista
-    Y el usuario busca y selecciona el proveedor correspondiente
-    Y el usuario guarda la asociación
-    Entonces la transacción es asociada con el proveedor seleccionado
+    Cuando el usuario selecciona una categoría de la lista de categorías
+    Entonces el sistema muestra solo las transacciones de la categoría seleccionada
+  
+  Escenario: Filtrar transacciones por fecha
+    Dado que el usuario está en la sección de transacciones
+    Cuando el usuario selecciona un rango de fechas
+    Entonces el sistema muestra solo las transacciones dentro del rango seleccionado
 
+  Escenario: Asociar una selección de transacciones con un contacto
+    Dado que el usuario está en la sección de transacciones
+    Cuando el usuario selecciona varias transacciones de la lista y selecciona la opción para asociar un contacto
+    Y el usuario elige un contacto de la lista de contactos
+    Y el usuario guarda la asociación
+    Entonces las transacciones seleccionadas son asociadas con el contacto seleccionado

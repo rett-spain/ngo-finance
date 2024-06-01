@@ -1,7 +1,7 @@
 Feature: Gestión de Contactos
 
   Escenario: Listar contactos
-    Dado que el usuario está en la sección de contactos
+    Dado que el usuario está en la página de inicio
     Cuando el usuario accede a la sección de contactos
     Entonces el usuario ve una lista de contactos ordenada alfabéticamente
     # Columnas de la lista: Nombre y Apellidos, Tipo de contacto, Teléfono, Email
