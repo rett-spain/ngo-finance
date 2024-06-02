@@ -1,23 +1,6 @@
 ```mermaid
 erDiagram
-    TRANSACTION ||--o| CONTACT : Contact__c
-    TRANSACTION ||--o| PERSONA_RETT : PersonaRett__c
-    RETT_RELATIONSHIP }o--o{ CONTACT : Contact__c
-    RETT_RELATIONSHIP }o--o{ PERSONA_RETT : PersonaRett__c
-    TERAPIAS }o--|| CONTACT : Contact__c
-
-    TRANSACTION {
-        int Amount__c
-        picklist Category__c
-        date Date__c
-        string Name
-        id Contact__c
-        id PersonaRett__c
-        calculated TransactionOwnerId__c
-        calculated TransactionOwnerType__c
-    }
-
-    CONTACT {
+    Contact {
         string FirstName
         string MiddleName
         string LastName
@@ -30,7 +13,7 @@ erDiagram
         string aesr_CuentaBancaria_IBAN__c
     }
 
-    PERSONA_RETT {
+    PersonaRett {
         string NombreCompleto
         string ContactID__c
         picklist rett_Gender__c
@@ -39,15 +22,40 @@ erDiagram
         date rett_DeceaseDate__c
     }
 
-    RETT_RELATIONSHIP {
+
+    RettRelationship }o--o{ Contact : Contact__c
+    RettRelationship }o--o{ PersonaRett : PersonaRett__c
+    RettRelationship {
         id Contacts__c
         id RettPersona__c
         picklist Tipo__c
     }
 
-    TERAPIAS {
-        id Terapias__c
+    Transaction ||--o| Contact : Contact__c
+    Transaction ||--o| PersonaRett : PersonaRett__c
+    Transaction {
+        int Amount__c
+        picklist Category__c
+        date Date__c
+        string Name
+        id Contact__c
+        id PersonaRett__c
+        calculated TransactionOwnerId__c
+        calculated TransactionOwnerType__c
+    }
+
+    Therapy }o--|| Contact : Contact__c
+    Therapy {
+        id TherapyId__c
         number Convocatoria__c
         id Contact__c
     }
+
+    Remesa }o--|| Contact : Contact__c
+    Remesa {
+        id RemesaRecord__c
+        string RemesaId__c
+        id Contact__c
+    }
+
 ```
