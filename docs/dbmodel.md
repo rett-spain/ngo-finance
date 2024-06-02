@@ -1,9 +1,11 @@
 ```mermaid
 erDiagram
-    TRANSACTION ||--|{ CONTACT : Contact__c
-    TRANSACTION ||--|{ PERSONA_RETT : PersonaRett__c
-    RETT_RELATIONSHIP ||--|| CONTACT : Contact__c
-    RETT_RELATIONSHIP ||--|| PERSONA_RETT : PersonaRett__c
+    TRANSACTION ||--o| CONTACT : Contact__c
+    TRANSACTION ||--o| PERSONA_RETT : PersonaRett__c
+    RETT_RELATIONSHIP }o--o{ CONTACT : Contact__c
+    RETT_RELATIONSHIP }o--o{ PERSONA_RETT : PersonaRett__c
+    TERAPIAS }o--|| CONTACT : Contact__c
+
     TRANSACTION {
         int Amount__c
         picklist Category__c
@@ -14,6 +16,7 @@ erDiagram
         calculated TransactionOwnerId__c
         calculated TransactionOwnerType__c
     }
+
     CONTACT {
         string FirstName
         string MiddleName
@@ -26,6 +29,7 @@ erDiagram
         string aesr_CuentaBancaria_NombreBanco__c
         string aesr_CuentaBancaria_IBAN__c
     }
+
     PERSONA_RETT {
         string NombreCompleto
         string ContactID__c
@@ -34,9 +38,16 @@ erDiagram
         bool rett_Deceased__c
         date rett_DeceaseDate__c
     }
+
     RETT_RELATIONSHIP {
         id Contacts__c
         id RettPersona__c
         picklist Tipo__c
+    }
+
+    TERAPIAS {
+        id Terapias__c
+        number Convocatoria__c
+        id Contact__c
     }
 ```
