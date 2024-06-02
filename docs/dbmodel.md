@@ -1,12 +1,16 @@
-
 ```mermaid
 erDiagram
-    TRANSACTION ||--|{ CONTACT : contains
+    TRANSACTION ||--|{ CONTACT : Contact__c
+    TRANSACTION ||--|{ PERSONA_RETT : PersonaRett__c
+    RETT_RELATIONSHIP ||--|| CONTACT : Contact__c
+    RETT_RELATIONSHIP ||--|| PERSONA_RETT : PersonaRett__c
     TRANSACTION {
         int Amount__c
         picklist Category__c
         date Date__c
         string Name
+        id Contact__c
+        id PersonaRett__c
         calculated TransactionOwnerId__c
         calculated TransactionOwnerType__c
     }
@@ -16,5 +20,23 @@ erDiagram
         string LastName
         email Email
         picklist ContactType__c
+        date aesrFechaAlta__c
+        date aesrFechaBaja__c
+        string aesr_CuentaBancaria_NombreTitular__c
+        string aesr_CuentaBancaria_NombreBanco__c
+        string aesr_CuentaBancaria_IBAN__c
+    }
+    PERSONA_RETT {
+        string NombreCompleto
+        string ContactID__c
+        picklist rett_Gender__c
+        date rett_BirthDate__c
+        bool rett_Deceased__c
+        date rett_DeceaseDate__c
+    }
+    RETT_RELATIONSHIP {
+        id Contacts__c
+        id RettPersona__c
+        picklist Tipo__c
     }
 ```

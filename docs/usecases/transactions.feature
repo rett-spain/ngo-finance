@@ -89,8 +89,8 @@ Feature: Gestión de Transacciones
     Y el usuario guarda la asociación
     Entonces las transacciones seleccionadas son asociadas con el contacto seleccionado
 
-  Escenario: Generar una exportación de transacciones en formato Excel
+  Escenario: Generar una exportación de transacciones a formato Excel
     Dado que el usuario está en la sección de transacciones
     Cuando el usuario selecciona la opción para exportar las transacciones
     Entonces el sistema genera un archivo
-    Y el usuario descarga el archivo con las transacciones en formato Excel
+    Y el usuario descarga el archivo con las transacciones a formato Excel
