@@ -10,14 +10,35 @@ Feature: Gestión de Transacciones
     
     Ejemplos:
     # Categorías disponibles
-    | Categoría |
-    | Donaciones |
-    | Cuotas |
-    | Subvenciones |
-    | Gastos |
-    | Eventos |
-    | Administrativo |
-    | Actividades |
+      | Categoría |
+      | Donaciones |
+      | Cuotas |
+      | Subvenciones |
+      | Gastos |
+      | Eventos |
+      | Administrativo |
+      | Actividades |
+
+  # Cómo gestionar las subcategorías correspondientes a cada categoría?
+  # Por ejemplo, en la categoría "Gastos" se pueden tener las siguientes subcategorías:
+        # Gastos
+        # Electricidad
+        # Mantenimiento Web
+        # Limpieza
+        # Mensajería
+        # Telefonía
+        # Agua
+        # Gestoría
+        # Servicio Psicología Grupal
+        # Fichaje Horario
+        # Prevención de Riesgos
+        # Corona Flores
+        # Póliza de seguro
+        # Gastos Oficina Madrid
+        # Gastos Oficina Valencia
+        # Gastos tecnología
+        # Asesoramiento juridico
+        # Comisiones
 
   Escenario: Añadir una lista de transacciones bancarias
     Dado que el usuario está en la sección de transacciones
@@ -68,17 +89,8 @@ Feature: Gestión de Transacciones
     Y el usuario guarda la asociación
     Entonces las transacciones seleccionadas son asociadas con el contacto seleccionado
 
-  Escenario: Importar remesa bancaria a partir de un archivo con formato específico para pagos de cuotas de socios
+  Escenario: Generar una exportación de transacciones en formato Excel
     Dado que el usuario está en la sección de transacciones
-    Cuando el usuario selecciona la opción para importar una remesa bancaria
-    Y el usuario carga el archivo con la remesa bancaria
-    Y el sistema procesa el archivo y muestra un resumen de las transacciones importadas
-    Y el usuario confirma y guarda las transacciones
-    Entonces las transacciones son guardadas en el sistema como pago de cuotas de socios
-
-    Ejemplos:
-    # Formato de archivo de remesa bancaria
-    | DNI socio | Nombre socio | Fecha de pago |
-    | XXXXXXXXX | Juan Pérez   | 2021-01-15   |
-    | XXXXXXXXX | María López  | 2021-01-15   |
-    | XXXXXXXXX | Pedro Gómez  | 2021-01-15   |
+    Cuando el usuario selecciona la opción para exportar las transacciones
+    Entonces el sistema genera un archivo
+    Y el usuario descarga el archivo con las transacciones en formato Excel
