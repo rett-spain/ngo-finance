@@ -19,3 +19,8 @@ Feature: Gestión de Rett Persona
     Cuando el usuario busca una Rett Persona
     Entonces el usuario ve una lista de contactos que coinciden con la búsqueda
     # Buscar por Nombre y Apellidos, Fecha de Nacimiento y Provincia
+
+  Escenario: Buscar Rett Persona que cumpla años en un mes
+    Dado que el usuario está en la sección de Rett Personas
+    Cuando el usuario busca una Rett Persona que cumpla años en un mes concreto
+    Entonces el usuario ve una lista de contactos que cumplen años en ese mes
