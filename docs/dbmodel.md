@@ -1,5 +1,6 @@
 ```mermaid
 erDiagram
+
     Contact {
         string FirstName
         string MiddleName
@@ -21,7 +22,6 @@ erDiagram
         bool rett_Deceased__c
         date rett_DeceaseDate__c
     }
-
 
     RettRelationship }o--o{ Contact : Contact__c
     RettRelationship }o--o{ PersonaRett : PersonaRett__c
