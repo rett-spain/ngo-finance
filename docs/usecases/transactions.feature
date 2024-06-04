@@ -3,11 +3,11 @@ Feature: Gestión de Transacciones
   Escenario: Añadir una nueva transacción bancaria
     Dado que el usuario está en la sección de transacciones
     Cuando el usuario selecciona la opción para añadir una nueva transacción
-    Y el usuario introduce los detalles de la transacción (fecha, monto, descripción y categoría)
+    Y el usuario introduce los detalles de la transacción (fecha, monto, descripción, origen y categoría)
     Y el usuario guarda la transacción
     Entonces la nueva transacción es guardada en el sistema
     Y la transacción es visible en la lista de transacciones
-    
+  
     Ejemplos:
     # Categorías disponibles
       | Categoría |
@@ -18,6 +18,12 @@ Feature: Gestión de Transacciones
       | Eventos |
       | Administrativo |
       | Actividades |
+
+    # Orígenes disponibles
+      | origen |
+      | Banco 1 |
+      | Banco 2 |
+      | PayPal |
 
   # Cómo gestionar las subcategorías correspondientes a cada categoría?
   # Por ejemplo, en la categoría "Gastos" se pueden tener las siguientes subcategorías:
