@@ -8,11 +8,11 @@ Feature: Gestión de Rett Persona
     # Se mostrará un icono con una cruz al lado de la fecha de nacimiento en caso que la Rett Persona haya fallecido
 
     Ejemplos:
-        | Nombre y Apellidos | Fecha de Nacimiento | Provincia |
-        | Juana Pérez        | 01/01/1990          | Madrid    |
-        | María López        | 02/02/1991          | Barcelona |
-        | Antonia Gómez      | 03/03/1992          | Valencia  |
-        | Ana Martínez       | 04/04/1993 x        | Sevilla   |
+        | Nombre y Apellidos | Fecha de Nacimiento | Edad | Provincia | 
+        |--------------------|----------------------|------|-----------|
+        | Juana Pérez        | 01/01/1990           | 34   | Madrid    |
+        | María López        | 02/02/2000           | 24   | Barcelona |
+        | Antonia Gómez      | 03/03/2002           | 22   | Valencia  |
 
   Escenario: Buscar Rett Persona
     Dado que el usuario está en la sección de Rett Personas

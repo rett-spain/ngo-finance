@@ -46,6 +46,9 @@ Feature: Gestión de Transacciones
         # Asesoramiento juridico
         # Comisiones
 
+  # Es necesaria esta subdivisión? O es suficiente con la categoría principal?
+  # Por ejemplo para los gastos, se puede tener una categoría "Gastos" y luego la asociación con un contacto de tipo proveedor para identificar el tipo de gasto
+
   Escenario: Añadir una lista de transacciones bancarias
     Dado que el usuario está en la sección de transacciones
     Cuando el usuario selecciona la opción para importar una lista de transacciones

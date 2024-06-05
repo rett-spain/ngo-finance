@@ -1,19 +1,5 @@
 Feature: Gestión de Becas
 
-  Escenario: Asociar un contacto o lista de contactos con una convocatoria de becas de terapias
-    Dado que el usuario está en la sección de contactos
-    Cuando el usuario selecciona uno o más contactos
-    Y el usuario asocia los contactos a una convocatoria de becas
-    Y el usuario guarda los cambios
-    Entonces los contactos son asociados a la convocatoria de becas
-
-  Escenario: Al asociar una transacción de pago de beca con un contacto, se actualiza el estado de la beca
-    Dado que el usuario está en la sección de becas
-    Cuando el usuario selecciona una beca
-    Y el usuario asocia una transacción de pago a la beca
-    Y el usuario guarda los cambios
-    Entonces el estado de la beca es actualizado para estar en estado "Pagada" para el contacto asociado
-
   Escenario: Dar de alta una nueva beca
     Dado que el usuario está en la sección de becas
     Cuando el usuario selecciona la opción de dar de alta una nueva beca
@@ -48,4 +34,18 @@ Feature: Gestión de Becas
     Dado que el usuario está en la sección de becas
     Cuando el usuario selecciona un estado de beca
     Entonces se muestran solo las becas que tienen el estado seleccionado
+
+  Escenario: Asociar un contacto o lista de contactos con una convocatoria de becas
+    Dado que el usuario está en la sección de contactos
+    Cuando el usuario selecciona uno o más contactos
+    Y el usuario asocia los contactos a una convocatoria de becas
+    Y el usuario guarda los cambios
+    Entonces los contactos son asociados a la convocatoria de becas
+
+  Escenario: Al asociar una transacción de pago de beca con un contacto, se actualiza el estado de la beca
+    Dado que el usuario está en la sección de becas
+    Cuando el usuario selecciona una beca
+    Y el usuario asocia una transacción de pago a la beca
+    Y el usuario guarda los cambios
+    Entonces el estado de la beca es actualizado para estar en estado "Pagada" para el contacto asociado
 
