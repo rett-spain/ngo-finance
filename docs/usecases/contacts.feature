@@ -53,9 +53,9 @@ Feature: Gestión de Contactos
       | Socio colaborador |
       | Donante particular |
       | Donante empresa |
+      | Proveedor |
       | No socio |
       | Baja |
-      | Proveedor |
 
   Escenario: Dar de baja un contacto
     Dado que el usuario está en la sección de contactos

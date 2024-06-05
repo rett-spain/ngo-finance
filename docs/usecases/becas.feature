@@ -48,4 +48,3 @@ Feature: Gestión de Becas
     Y el usuario asocia una transacción de pago a la beca
     Y el usuario guarda los cambios
     Entonces el estado de la beca es actualizado para estar en estado "Pagada" para el contacto asociado
-
