@@ -1,6 +1,15 @@
 ```mermaid
 erDiagram
 
+    Contact ||--o{ RettRelationship : Contact__c
+    PersonaRett ||--o{ RettRelationship : PersonaRett__c
+
+    Contact |o--|| Transaction : Contact__c
+    Contact ||--o{ Remesa : Contact__c
+    Contact ||--o{ Therapy : Contact__c
+
+
+
     Contact {
         string FirstName
         string MiddleName
@@ -23,16 +32,12 @@ erDiagram
         date rett_DeceaseDate__c
     }
 
-    RettRelationship }o--o{ Contact : Contact__c
-    RettRelationship }o--o{ PersonaRett : PersonaRett__c
     RettRelationship {
         id Contacts__c
         id RettPersona__c
         picklist Tipo__c
     }
 
-    Transaction ||--o| Contact : Contact__c
-    Transaction ||--o| PersonaRett : PersonaRett__c
     Transaction {
         int Amount__c
         picklist Category__c
@@ -44,14 +49,12 @@ erDiagram
         calculated TransactionOwnerType__c
     }
 
-    Therapy }o--|| Contact : Contact__c
     Therapy {
         id TherapyId__c
         number Convocatoria__c
         id Contact__c
     }
 
-    Remesa }o--|| Contact : Contact__c
     Remesa {
         id RemesaRecord__c
         string RemesaId__c
