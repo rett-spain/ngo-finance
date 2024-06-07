@@ -1,0 +1,16 @@
+firstName,middleName,lastName,email,ContactType__c,aesrCuotaSocio__c,aesrFechaAlta__c
+Pedro,,Dias,pedro@test.com,Socio ordinario,50,2019-01-01
+Maria,,Gomez,maria@test.com,Donante particular,30,2020-05-15
+Luis,Diaz,Martinez,luis@test.com,Socio colaborador,60,2021-03-20
+Ana,,Fernandez,ana@test.com,Donante empresa,100,2022-07-11
+Carlos,Dominguez,Lopez,carlos@test.com,Baja,0,2020-11-30
+Lucia,,Garcia,lucia@test.com,Pendiente documentación,0,2023-01-25
+Juan,,Hernandez,juan@test.com,No socio,0,2022-04-19
+Laura,Maria,Perez,laura@test.com,Socio ordinario,50,2021-09-05
+David,Perez,Sanchez,david@test.com,Socio colaborador,60,2020-12-17
+Sofia,Rodriguez,Diaz,sofia@test.com,Donante particular,25,2021-08-22
+Miguel,Maya,Torres,miguel@test.com,Donante empresa,150,2023-05-08
+Raul,Ortiz,Ramirez,raul@test.com,Baja,0,2024-03-14
+Elena,Alba,Molina,elena@test.com,Pendiente documentación,0,2021-11-02
+Sergio,Martinez,Cruz,sergio@test.com,No socio,0,2020-02-18
+Marta,Ortiz,Ortiz,marta@test.com,Socio ordinario,50,2020-06-23
