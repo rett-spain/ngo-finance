@@ -1,16 +1,17 @@
+![entity-relationships.png](entity-relationships.png)
+
 ```mermaid
 erDiagram
 
-    Contact ||--o{ RettRelationship : Contact__c
-    PersonaRett ||--o{ RettRelationship : PersonaRett__c
+    Contact ||--o{ RettRelationship : associated
+    PersonaRett ||--o{ RettRelationship : associated
 
-    Contact |o--|| Transaction : Contact__c
-    Contact ||--o{ Remesa : Contact__c
-    Contact ||--o{ Therapy : Contact__c
-
-
+    Contact |o--|| Transaction : makes
+    Contact ||--o{ Remesa : receives
+    Contact ||--o{ Therapy : undergoes
 
     Contact {
+        id Contact__c
         string FirstName
         string MiddleName
         string LastName
@@ -24,6 +25,7 @@ erDiagram
     }
 
     PersonaRett {
+        string PersonaRett__c
         string NombreCompleto
         string ContactID__c
         picklist rett_Gender__c
@@ -33,32 +35,31 @@ erDiagram
     }
 
     RettRelationship {
-        id Contacts__c
-        id RettPersona__c
+        string RettRelationship__c
+        string Contacts__c
+        string RettPersona__c
         picklist Tipo__c
     }
 
     Transaction {
+        string Transaction__c
         int Amount__c
         picklist Category__c
         date Date__c
         string Name
-        id Contact__c
-        id PersonaRett__c
-        calculated TransactionOwnerId__c
-        calculated TransactionOwnerType__c
+        string Contact__c
     }
 
     Therapy {
-        id TherapyId__c
+        istring Therapy__c
         number Convocatoria__c
-        id Contact__c
+        string Contact__c
     }
 
     Remesa {
-        id RemesaRecord__c
+        string Remesa__c
         string RemesaId__c
-        id Contact__c
+        string Contact__c
     }
 
 ```
