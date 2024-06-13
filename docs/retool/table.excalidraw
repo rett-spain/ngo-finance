@@ -77,10 +77,10 @@
     {
       "id": "_oqvs6SXaHT1lY0CprNvR",
       "type": "arrow",
-      "x": 446,
-      "y": 313,
-      "width": 188,
-      "height": 44,
+      "x": 436.2235570339152,
+      "y": 287.93811174231325,
+      "width": 178.2235570339152,
+      "height": 18.938111742313254,
       "angle": 0,
       "strokeColor": "#1971c2",
       "backgroundColor": "transparent",
@@ -95,11 +95,11 @@
         "type": 2
       },
       "seed": 482970394,
-      "version": 34,
-      "versionNonce": 2045526278,
+      "version": 94,
+      "versionNonce": 1737553478,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1718263753088,
+      "updated": 1718266710985,
       "link": null,
       "locked": false,
       "points": [
@@ -108,12 +108,12 @@
           0
         ],
         [
-          -93,
-          -31
+          -108.45595400796913,
+          -12.578216209169625
         ],
         [
-          -188,
-          -44
+          -178.2235570339152,
+          -18.938111742313254
         ]
       ],
       "lastCommittedPoint": null,
@@ -449,10 +449,10 @@
     {
       "id": "LtCQUwtFFdkSOVyR16wAV",
       "type": "arrow",
-      "x": 359.51844977510564,
-      "y": 177.17089765721033,
+      "x": 359.14059773567686,
+      "y": 174.8909256231972,
       "width": 126.9188942967319,
-      "height": 11.763214593355627,
+      "height": 9.333798563209882,
       "angle": 2.813124873764659,
       "strokeColor": "#1971c2",
       "backgroundColor": "transparent",
@@ -467,11 +467,11 @@
         "type": 2
       },
       "seed": 1946326790,
-      "version": 228,
-      "versionNonce": 1477100102,
+      "version": 259,
+      "versionNonce": 957019910,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1718264225399,
+      "updated": 1718265938729,
       "link": null,
       "locked": false,
       "points": [
@@ -480,8 +480,8 @@
           0
         ],
         [
-          -62.530772312048384,
-          -11.763214593355627
+          -75.98602125195725,
+          -9.333798563209882
         ],
         [
           -126.9188942967319,
@@ -492,8 +492,8 @@
       "startBinding": null,
       "endBinding": {
         "elementId": "fV2REG2BlVTt2BDZxNGTX",
-        "focus": -0.4614133218965136,
-        "gap": 13.581531277184979
+        "focus": -0.4892914530993531,
+        "gap": 13.581531277185036
       },
       "startArrowhead": null,
       "endArrowhead": "arrow"
@@ -512,13 +512,13 @@
       "strokeWidth": 2,
       "strokeStyle": "solid",
       "roughness": 1,
-      "opacity": 50,
+      "opacity": 100,
       "groupIds": [],
       "frameId": null,
       "roundness": null,
       "seed": 1322876442,
-      "version": 137,
-      "versionNonce": 97559962,
+      "version": 140,
+      "versionNonce": 1144745114,
       "isDeleted": false,
       "boundElements": [
         {
@@ -526,7 +526,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1718263957492,
+      "updated": 1718264530464,
       "link": null,
       "locked": false,
       "text": "Item from data source",
@@ -553,16 +553,16 @@
       "strokeWidth": 2,
       "strokeStyle": "solid",
       "roughness": 1,
-      "opacity": 50,
+      "opacity": 100,
       "groupIds": [],
       "frameId": null,
       "roundness": null,
       "seed": 1974580102,
-      "version": 346,
-      "versionNonce": 1243936410,
+      "version": 350,
+      "versionNonce": 920679686,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1718264464107,
+      "updated": 1718264528743,
       "link": null,
       "locked": false,
       "text": "Transformation to get this contact type / color relation\n(this way we have consistent color for contact types across the application)",
@@ -809,6 +809,42 @@
         1,
         1
       ]
+    },
+    {
+      "id": "fA03hfyHflePQ0rHx7eaC",
+      "type": "text",
+      "x": 1168.3121237672597,
+      "y": 757.2423304326394,
+      "width": 334.7998046875,
+      "height": 20,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": null,
+      "seed": 1920440346,
+      "version": 60,
+      "versionNonce": 1469477338,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1718264519055,
+      "link": null,
+      "locked": false,
+      "text": "Retrieve Salesforce info using SOQL query",
+      "fontSize": 16,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 14,
+      "containerId": null,
+      "originalText": "Retrieve Salesforce info using SOQL query",
+      "lineHeight": 1.25
     }
   ],
   "appState": {
