@@ -1,0 +1,12 @@
+key,label_es,new_key
+Id,Id,id
+Name,Nombre,name
+Date__c,Fecha,date
+Amount__c,Importe,amount
+Category__c,Categoría,category
+Contact__c,Contacto,contact
+Contact__r.Name,Nombre de contacto,contact_name
+Contact__r.ContactType__c,Tipo de contacto,contact_type
+Contact__r.ContactSubType__c,Subtipo de contacto,contact_subtype
+References__c,Referencias,references
+Origen__c,Origen,origin

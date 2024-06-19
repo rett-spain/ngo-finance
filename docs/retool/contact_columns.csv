@@ -1,0 +1,15 @@
+key,label_es,new_key
+Baja__c,Baja,baja
+ContactSubType__c,Tipo de contacto,contact_subtype
+ContactType__c,ContactType,contact_type
+Email,Email,email
+FirstName,Nombre,first_name
+LastName,Segundo apellido,last_name
+MailingAddress,Dirección,mailing_address
+MiddleName,Primer apellido,middle_name
+MobilePhone,Móvil,mobile_phone
+Name,Nombre completo,name
+aesrCuotaSocio__c,Cuota de socio,cuota_socio
+aesrFechaAlta__c,Fecha de alta,fecha_alta
+aesrFechaBaja__c,Fecha de baja,fecha_baja
+id,Id,id
