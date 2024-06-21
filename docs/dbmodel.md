@@ -13,6 +13,7 @@ erDiagram
     Contact ||--o{ ContactType : categorized
     RettRelationship ||--o{ RettRelationshipType : categorized
     Transaction ||--o{ TransactionCategory : categorized
+    Transaction ||--o{ TransactionOrigin : originated
     Transaction ||--o{ TransactionSubCategory : subcategorized
 
     Contact {
@@ -89,6 +90,14 @@ erDiagram
     TransactionSubCategory {
         id SubCategory__c
         string Name
+    }
+
+    TransactionOrigin {
+        id Origin__c
+        string Name
+        string GroupColor
+        string DistinctColor
+        string Label_ES
     }
 
 
