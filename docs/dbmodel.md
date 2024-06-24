@@ -9,8 +9,11 @@ erDiagram
     Contact |o--|| Transaction : makes
     Contact ||--o{ Remesa : receives
     Contact ||--o{ Therapy : undergoes
-
     Contact ||--o{ ContactType : categorized
+    Contact ||--o{ ContactSubtype : categorized
+
+    ContactType ||--o{ ContactSubtype : categorized
+
     RettRelationship ||--o{ RettRelationshipType : categorized
     Transaction ||--o{ TransactionCategory : categorized
     Transaction ||--o{ TransactionOrigin : originated
@@ -69,6 +72,12 @@ erDiagram
     }
 
     ContactType {
+        id ContactType__c
+        string Description
+    }
+
+    ContactSubtype {
+        id ContactSubtype__c
         id ContactType__c
         string Description
     }
