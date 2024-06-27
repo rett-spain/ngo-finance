@@ -3,21 +3,19 @@
 ```mermaid
 erDiagram
 
-    Contact ||--o{ RettRelationship : associated
-    PersonaRett ||--o{ RettRelationship : associated
+    Contact ||--o{ RettRelationship__c : associated
+    RettPersona__c ||--o{ RettRelationship__c : associated
 
-    Contact |o--|| Transaction : makes
-    Contact ||--o{ Remesa : receives
-    Contact ||--o{ Therapy : undergoes
-    Contact ||--o{ ContactType : categorized
-    Contact ||--o{ ContactSubtype : categorized
+    Contact |o--|| Transaction__c : makes
+    Contact ||--o{ Remesa_TBD : receives
+    Contact ||--o{ Therapy_TBD : undergoes
+    Contact ||--o{ ContactType__c : categorized
 
-    ContactType ||--o{ ContactSubtype : categorized
+    ContactType__c ||--o{ ContactSubtype__c : categorized
 
-    RettRelationship ||--o{ RettRelationshipType : categorized
-    Transaction ||--o{ TransactionCategory : categorized
-    Transaction ||--o{ TransactionOrigin : originated
-    Transaction ||--o{ TransactionSubCategory : subcategorized
+    Transaction__c ||--o{ TransactionCategory__c : categorized
+    Transaction__c ||--o{ TransactionOrigin__c : originated
+    TransactionCategory__c ||--o{ TransactionType__c : subcategorized
 
     Contact {
         id Contact__c
@@ -33,7 +31,7 @@ erDiagram
         string aesr_CuentaBancaria_IBAN__c
     }
 
-    PersonaRett {
+    RettPersona__c {
         id PersonaRett__c
         string NombreCompleto
         picklist rett_Gender__c
@@ -42,71 +40,101 @@ erDiagram
         date rett_DeceaseDate__c
     }
 
-    RettRelationship {
+    RettPersona__c {
+        id RettPersona__c
+        string Name
+        string Description__c
+        string(DNI) ContactID__c
+        Checkbox rett_Deceased__c
+        Date rett_DeceaseDate__c
+        Date rett_BirthDate__c
+        Picklist rett_Gender__c
+        string rett_MutationInfo__c
+        string Protein__c
+        Picklist RettMutation__c
+    }
+
+    RettRelationship__c {
+        id RettRelationship__c
+        int Name
+        string Descripcion__c
+        Picklist Tipo__c
+        Lookup(Contact) Contacts__c
+        Lookup(RettPersona) RettPersona__c
+    }
+
+    RettRelationship__c {
         id RettRelationship__c
         foreign_key Contacts__c
         foreign_key RettPersona__c
         picklist Tipo__c
     }
 
-    Transaction {
+    Transaction__c {
         id Transaction__c
-        int Amount__c
-        picklist Category__c
-        picklist SubCategory__c
-        date Date__c
         string Name
-        string Contact__c
+        int Amount__c
+        Date Date__c
+        string References__c
+        Lookup(TransactionCategory) TransactionCategory__c
+        Lookup(TransactionOrigin) TransactionOrigin__c
+        Lookup(TransactionType) TransactionType__c
+        Lookup(Contact) Contact__c
     }
 
-    Therapy {
+    Therapy_TBD {
         string Therapy__c
         number Convocatoria__c
         string Contact__c
     }
 
-    Remesa {
+    Remesa_TBD {
         string Remesa__c
         string RemesaId__c
         string Contact__c
     }
 
-    ContactType {
+    ContactType__c {
         id ContactType__c
-        string Description
+        string Name
+        string DistinctColor__c
+        string GroupColor__c
+        string Label_ES__c
     }
 
-    ContactSubtype {
+    ContactSubtype__c {
         id ContactSubtype__c
-        id ContactType__c
-        string Description
-    }
-
-    RettRelationshipType {
-        id Tipo__c
-        string Description
-    }
-
-    TransactionCategory {
-        id Category__c
         string Name
-        int TransactionType
-        string GroupColor
-        string DistinctColor
-        string Label_ES
+        string DistinctColor__c
+        string GroupColor__c
+        string Label_ES__c
+        Lookup(ContactType) ContactType__c
     }
 
-    TransactionSubCategory {
-        id SubCategory__c
+    TransactionCategory__c {
+        id TransactionCategory__c
         string Name
+        string DistinctColor__c
+        string GroupColor__c
+        string Label_ES__c
+        Lookup(TransactionType) TransactionType__c
     }
 
-    TransactionOrigin {
-        id Origin__c
+    TransactionType__c {
+        id TransactionType__c
         string Name
-        string GroupColor
-        string DistinctColor
-        string Label_ES
+        string DistinctColor__c
+        string GroupColor__c
+        string Label_ES__c
+        int TransactionSign__c
+    }
+
+    TransactionOrigin__c {
+        id TransactionOrigin__c
+        string Name
+        string DistinctColor__c
+        string GroupColor__c
+        string Label_ES__c
     }
 
 
