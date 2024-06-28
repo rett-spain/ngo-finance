@@ -9,9 +9,9 @@ erDiagram
     Contact |o--|| Transaction__c : makes
     Contact ||--o{ Remesa_TBD : receives
     Contact ||--o{ Therapy_TBD : undergoes
-    Contact ||--o{ ContactType__c : categorized
+    Contact ||--o{ ContactCategory__c : categorized
 
-    ContactType__c ||--o{ ContactSubtype__c : categorized
+    ContactCategory__c ||--o{ ContactType__c : categorized
 
     Transaction__c ||--o{ TransactionCategory__c : categorized
     Transaction__c ||--o{ TransactionOrigin__c : originated
@@ -23,12 +23,12 @@ erDiagram
         string MiddleName
         string LastName
         email Email
-        foreign_key ContactType__c
         date aesrFechaAlta__c
         date aesrFechaBaja__c
         string aesr_CuentaBancaria_NombreTitular__c
         string aesr_CuentaBancaria_NombreBanco__c
         string aesr_CuentaBancaria_IBAN__c
+        Lookup(ContactCategory__c) ContactCategory__c
     }
 
     RettPersona__c {
@@ -94,21 +94,21 @@ erDiagram
         string Contact__c
     }
 
+    ContactCategory__c {
+        id ContactCategory__c
+        string Name
+        string DistinctColor__c
+        string GroupColor__c
+        string Label_ES__c
+        Lookup(ContactType) ContactType__c
+    }
+
     ContactType__c {
         id ContactType__c
         string Name
         string DistinctColor__c
         string GroupColor__c
         string Label_ES__c
-    }
-
-    ContactSubtype__c {
-        id ContactSubtype__c
-        string Name
-        string DistinctColor__c
-        string GroupColor__c
-        string Label_ES__c
-        Lookup(ContactType) ContactType__c
     }
 
     TransactionCategory__c {
