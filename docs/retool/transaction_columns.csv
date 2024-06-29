@@ -1,12 +1,22 @@
-key,label_es,new_key
-Id,Id,id
-Name,Concepto,detail
-Date__c,Fecha,date
-Amount__c,Importe,amount
-Category__c,Categoría,category
-Contact__c,Contacto,contact
-Contact__r.Name,Nombre de contacto,contact_name
-Contact__r.ContactType__c,Tipo de contacto,contact_type
-Contact__r.ContactSubType__c,Tipo de contacto,contact_subtype
-References__c,Referencia,reference
-Origen__c,Origen,origin
+key,label_es
+transaction_id,TransactionID
+detail,Detalle
+date,Fecha
+amount,Importe
+contact_id,ContactID
+contact_name,Nombre
+contact_category_id,ContactCategoryID
+contact_category_label,Categoria de contacto
+contact_type_id,ContactTypeID
+contact_type_label,Tipo de contacto
+reference,Referencia
+origin_id,OriginID
+origin_label,Origen
+transaction_category_id,TransactionCategoryID
+transaction_category_label,Categoria de transacción
+transaction_category_distinct_color,TransactionCategoryDistinctColor
+transaction_type_id,TransactionTypeID
+transaction_type_label,Tipo de transacción
+transaction_sign,TransactionSign
+transaction_type_distinct_color,TransactionTypeDistinctColor
+merged_contact_type,Tipo de contacto

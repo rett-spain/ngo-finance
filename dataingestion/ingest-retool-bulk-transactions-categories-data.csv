@@ -1,0 +1,29 @@
+transaction_category,transaction_category_name,label_es,transaction_type,distinct_color,group_color
+Cuota anual,Cuota anual,Cuota de socio,,,#000000
+Merchandising,Gasto de merchandising,Gasto de evento,,,#DC143C
+Gasto operativo,Gasto operativo,Gasto operativo,,,#DC143C
+Eventos,Eventos,Captación de fondos,,,#000000
+Calendario,Venta de calendarios,Captación de fondos,,,#000000
+Subvención publica,Subvención publica,Subvención,,,#000000
+Donación particular,Donación particular,Donación,,,#000000
+Gastos de representación,Gastos de representación,Gasto administrativo,,,#DC143C
+Becas,Becas,Gasto de actividad,,,#DC143C
+Lotería,Gasto de lotería,Gasto de evento,,,#DC143C
+Subvención privada,Subvención privada,Subvención,,,#000000
+BCB,Gasto de Bodas, comuniones y bautizos,,,#DC143C
+Encuentro de familias,Encuentro de familias,Gasto de actividad,,,#DC143C
+Formación,Formación,Gasto administrativo,,,#DC143C
+Merchandising,Merchandising,Captación de fondos,,,#000000
+BCB,Bodas, comuniones y bautizos,,,#000000
+Cumpleaños Rett,Cumpleaños Rett,Gasto de actividad,,,#DC143C
+Seguridad social,Seguridad social,Gasto administrativo,,,#DC143C
+Membresia,Membresia,Gasto administrativo,,,#DC143C
+Nóminas,Nóminas,Gasto administrativo,,,#DC143C
+Lotería,Lotería,Captación de fondos,,,#000000
+Donación empresa,Donación de empresa,Donación,,,#000000
+Cuota mensual,Cuota mensual,Cuota de socio,,,#000000
+Calendario,Gasto de calendario,Gasto de evento,,,#DC143C
+Eventos,Gasto de eventos,Gasto de evento,,,#DC143C
+Impuesto,Impuesto,Gasto administrativo,,,#DC143C
+FinRett,FinRett,Gasto de actividad,,,#DC143C
+Comunicadores,Comunicadores,Gasto de actividad,,,#DC143C

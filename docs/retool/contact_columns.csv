@@ -1,15 +1,19 @@
-key,label_es,new_key
-Baja__c,Baja,baja
-ContactSubType__c,Tipo de contacto,contact_subtype
-ContactType__c,ContactType,contact_type
-Email,Email,email
-FirstName,Nombre,first_name
-LastName,Segundo apellido,last_name
-MailingAddress,Dirección,mailing_address
-MiddleName,Primer apellido,middle_name
-MobilePhone,Móvil,mobile_phone
-Name,Nombre completo,name
-aesrCuotaSocio__c,Cuota de socio,cuota_socio
-aesrFechaAlta__c,Fecha de alta,fecha_alta
-aesrFechaBaja__c,Fecha de baja,fecha_baja
-id,Id,id
+key,label_es
+contact_id,ContactID
+first_name,Nombre
+middle_name,Primer apellido
+last_name,Segundo apellido
+name,Nombre completo
+email,Email
+cuota_socio,Cuota de socio
+fecha_alta,Fecha de alta
+baja,Baja
+fecha_baja,Fecha de baja
+contact_category_id,ContactCategoryID
+contact_category_group_color,ContactCategoryGroupColor
+contact_category_distinct_color,ContactCategoryDistinctColor
+contact_category_label,Categoria de contacto
+contact_type_id,ContactTypeID
+contact_type_label,Tipo de contacto
+contact_type_distinct_color,ContactTypeDistinctColor
+mailing_address,Dirección

@@ -78,7 +78,6 @@ erDiagram
         string References__c
         Lookup(TransactionCategory) TransactionCategory__c
         Lookup(TransactionOrigin) TransactionOrigin__c
-        Lookup(TransactionType) TransactionType__c
         Lookup(Contact) Contact__c
     }
 
