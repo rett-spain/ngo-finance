@@ -186,6 +186,22 @@ class SalesForceAPI:
                 
         print(f"Exported {len(contacts)} contacts to {file_path}")
 
+    # Bulk simple export contacts to a CSV file
+    def export_basic_contact_info_to_csv(self, file_path):
+        query = "SELECT Id, ContactType__c, FirstName, MiddleName, LastName, Name, Email FROM Contact"
+        result = self.sf.query_all(query)
+
+        contacts = result['records']
+        fieldnames = contacts[0].keys()
+
+        with open(file_path, mode='w', newline='') as file:
+            writer = csv.DictWriter(file, fieldnames=fieldnames)
+            writer.writeheader()
+            for contact in contacts:
+                writer.writerow(contact)
+                
+        print(f"Exported {len(contacts)} contacts to {file_path}")
+
     # Generic bulk export to a CSV file
     def export_to_csv(self, file_path, soql_query):
         result = self.sf.query_all(soql_query)

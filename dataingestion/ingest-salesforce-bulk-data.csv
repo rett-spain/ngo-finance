@@ -1,16 +1,11 @@
-Name,Date__c,Amount__c,Category__c,Contact__c,PersonaRett__c
-Donation April,2024-04-01,23.0,Donaciones,,
-Expense March,2024-03-02,-20.42,Gastos,,
-Membership Fee February,2024-02-03,55.0,Cuotas,,
-Activity January,2024-01-15,100.0,Actividades,,
-Administrative Expense May,2024-05-20,-35.75,Administrativo,,
-Membership Fee June,2024-06-10,45.0,Cuotas,,
-Donation July,2024-07-25,10.0,Donaciones,,
-Expense August,2024-08-05,-50.0,Gastos,,
-Membership Fee September,2024-09-12,75.0,Cuotas,,
-Subsidy October,2024-10-30,20.0,Subvenciones,,
-Activity November,2024-11-22,80.0,Actividades,,
-Administrative Expense December,2024-12-15,-60.0,Administrativo,,
-Donation January,2024-01-05,30.0,Donaciones,,
-Expense February,2024-02-25,-25.0,Gastos,,
-Subsidy March,2024-03-15,40.0,Subvenciones,,
+Amount__c,Contact__c,Date__c,References__c,TransactionDetail__c,TransactionCategory__c,TransactionOrigin__c
+97,003AW00000KuUhv,6/1/2024,,This is an example of donation,a1nAW0000065e34YAA,a1kAW00006GO04xYAD
+33,003AW00000KuUiD,6/1/2024,,This is an example of donation,a1nAW0000065e34YAA,a1kAW00006GO04xYAD
+19,003AW00000KuUhy,6/1/2024,,This is an example of donation,a1nAW0000065fANYAY,a1kAW00006GO04xYAD
+17,003AW00000KuUhy,6/1/2024,,This is an example of donation,a1nAW0000065mi9YAA,a1kAW00006GO04xYAD
+7,003AW00000KuUhZYAV,6/1/2024,,This is an example of donation,a1nAW0000065fANYAY,a1kAW00006GO04xYAD
+43,003AW00000KuUhZYAV,6/1/2024,,This is an example of donation,a1nAW0000065ftXYAQ,a1kAW00006GO04xYAD
+32,003AW00000KuUhZYAV,6/1/2024,,This is an example of donation,a1nAW0000065ftXYAQ,a1kAW00006GO36vYAD
+6,003AW00000KuUhZYAV,6/1/2024,,This is an example of donation,a1nAW0000065sFgYAI,a1kAW00006GO36vYAD
+17,003AW00000KuUhZYAV,6/1/2024,,This is an example of donation,a1nAW0000065sFgYAI,a1kAW00006GNuoRYAT
+4,003AW00000KuUhZYAV,6/1/2024,,This is an example of donation,a1nAW0000065sFgYAI,a1kAW00006GO36vYAD
