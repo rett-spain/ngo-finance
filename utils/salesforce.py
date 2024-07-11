@@ -188,7 +188,7 @@ class SalesForceAPI:
 
     # Bulk simple export contacts to a CSV file
     def export_basic_contact_info_to_csv(self, file_path):
-        query = "SELECT Id, ContactType__c, FirstName, MiddleName, LastName, Name, Email FROM Contact"
+        query = "SELECT Id, ContactType__c, ContactCategory__c, FirstName, MiddleName, LastName, Name, Email FROM Contact"
         result = self.sf.query_all(query)
 
         contacts = result['records']

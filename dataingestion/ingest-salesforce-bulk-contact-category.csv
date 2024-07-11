@@ -1,0 +1,19 @@
+ContactCategory, ContactType, Label_ES, GroupColor, DistinctColor
+proveedor_transporte, proveedor, Proveedor de Transporte, #C7D2FE, #FECACA
+proveedor_retail, proveedor, Proveedor de Retail, #C7D2FE, #FECACA
+proveedor_alimentos, proveedor, Proveedor de Alimentos, #C7D2FE, #FECACA
+proveedor_servicios_profesionales, proveedor, Proveedor de Servicios Profesionales, #C7D2FE, #FECACA
+proveedor_mantenimiento, proveedor, Proveedor de Mantenimiento, #C7D2FE, #FECACA
+proveedor_salud, proveedor, Proveedor de Salud, #C7D2FE, #FECACA
+proveedor_cultural_eventos, proveedor, Proveedor Cultural y Eventos, #C7D2FE, #FECACA
+proveedor_tecnologia, proveedor, Proveedor de Tecnología, #C7D2FE, #FECACA
+proveedor_financiero, proveedor, Proveedor Financiero, #C7D2FE, #FECACA
+proveedor_utilidades, proveedor, Proveedor de Utilidades, #C7D2FE, #FECACA
+proveedor_servicios_varios, proveedor, Proveedor Servicios Varios, #C7D2FE, #FECACA
+proveedor_oficina, proveedor, Proveedor de Oficina, #C7D2FE, #FECACA
+socio_ordiario, socio, Socio Ordinario, #FDE68A, #FDE68A
+socio_colaborador, socio, Socio Colaborador, #FDE68A, #EECFF3
+donante_empresa, donante, Donante Empresa, #A7F3D0, #A7F3D0
+donante_particular, donante, Donante Particular, #A7F3D0, #BFDBFE
+instituto_publico, institucion, Institución Pública, #BFDBFE, #C7D2FE
+instituto_privado, institucion, Institución Privada, #BFDBFE, #FCD6BB
